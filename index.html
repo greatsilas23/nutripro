@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+background: #a4b8a0;
+}
+* {
+  box-sizing: border-box;
+}
+
+button,
+a {
+  cursor: pointer;
+  transition: 0.3s;
+  color: inherit;
+  font-weight: 600;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  translate: 0 -72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 20px;
+  width: 100%;
+  height: 72px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+  background: #03fc77;
+  transition: 0.3s;
+}
+
+nav.visible {
+  top: 0;
+  translate: 0;
+}
+
+nav > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-items > a {
+  text-decoration: none;
+  color: rgb(255 255 255 / 96%);
+  height: 72px;
+  display: grid;
+  place-items: center;
+}
+
+.nav-items > a:hover {
+  color: rgb(255 255 255 / 96%);
+}
+
+h2 {
+  font-size: 20px;
+  margin: 0 0 4px;
+  cursor: default;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 100px 60px;
+}
+
+section.shaded {
+  background: #f9f9ff;
+}
+
+section > img {
+  width: 200px;
+  height: 200px;
+}
+
+section.shaded > img {
+  padding: 20px;
+}
+
+section > p {
+  line-height: 1.7;
+}
+
+footer {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 0 30px;
+}
+
+@media (width < 620px) {
+  footer {
+    flex-direction: column;
+  }
+
+  footer.bottom {
+    gap: 16px;
+    flex-direction: column-reverse;
+  }
+}
+
+footer > img {
+  margin-top: 10px;
+}
+
+@media (width >= 620px) {
+  footer {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0;
+  }
+}
+
+footer {
+  color: #a2b5cd;
+}
+
+footer.top {
+  border-bottom: 2px solid #3a4f6a;
+  padding-bottom: 20px;
+}
+
+footer.bottom {
+  padding: 20px 0;
+  justify-content: space-between;
+}
+
+footer.top .links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.links > div {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+footer h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #f7f7f7;
+}
+
+.legal {
+  font-size: 12px;
+}
+
+.legal > a {
+  margin: 0 4px;
+}
+
+.legal > span {
+  margin-right: 10px;
+}
+
+footer.bottom .links {
+  display: flex;
+  gap: 18px;
+}
+
+footer.bottom .links > a {
+  font-size: 24px;
+}
+
+@media (width < 420px) {
+  footer {
+    text-align: center;
+    align-items: center;
+  }
+
+  footer.top .links {
+    grid-template-columns: 1fr;
+  }
+
+  footer.bottom {
+    align-items: center;
+  }
+
+  .legal > span {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 2px;
+  }
+}
+
+</style>
+</head>
+<body>
+<nav class="navbar visible" id="navbar">
+      <img src="logo.svg" />
+      <div class="nav-items">
+        <a href="#">Home</a>
+        <a href="#">Feedback</a>
+        <a href="#">About</a>
+      </div>
+    </nav>
+  <section class="shaded">
+      <img src="recipes.svg" />
+      <div>
+        <h2>Recipies</h2>
+        <p>
+          a set of instructions for preparing a particular dish, including a list of the ingredients required.
+        </p>
+      </div>
+    </section>
+    <section class="shaded">
+      <img src="nutrition.svg" />
+      <div>
+        <h2>Nutritional Management of Diseases</h2>
+        <p>
+          Managing a disease condition using dietary means. Dietary management focusses on practical aspects of normal diets, application of which principles and adaptation or modification of these diets to the disease condition.
+        </p>
+      </div>
+    </section>
+    <section>
+      <div>
+        <h2>Dietary Information for Everyone</h2>
+        <p>
+          Nonfraudulent nutrition information related to food, food materials, or dietary supplements
+        </p>
+      </div>
+      <img src="diet.svg" />
+    </section>
+    <section class="shaded">
+      <img src="exercise.svg" />
+      <div>
+        <h2>My exercise</h2>
+        <p>
+          Managing a disease condition using dietary means. Dietary management focusses on practical aspects of normal diets, application of which principles and adaptation or modification of these diets to the disease condition.
+        </p>
+      </div>
+    </section>
+    <section>
+      <footer class="top">
+        <img src="logo.svg" />
+        <div class="links">
+          <div>
+            <h2>Platform</h2>
+            <a>Directus Core</a>
+            <a>Open Data Platform</a>
+            <a>Feature List</a>
+            <a>Road Map</a>
+            <a>Marketplace</a>
+          </div>
+          <div>
+            <h2>Cloud</h2>
+            <a>Dashboard</a>
+            <a>Register</a>
+            <a>Pricing</a>
+            <a>System Status</a>
+            <a>Partner Program</a>
+          </div>
+        </div>
+      </footer>
+      <footer class="bottom">
+        <div class="legal">
+          <span> © 2023 All rights reserved </span>
+          <a> MIT </a>
+          <a> Terms </a>
+          <a> Privacy </a>
+        </div>
+        <div class="links">
+          <a class="fa-brands fa-github"></a>
+          <a class="fa-brands fa-linkedin"></a>
+          <a class="fa-brands fa-docker"></a>
+        </div>
+      </footer>
+    </section>
+  </body>
+
+</html>
